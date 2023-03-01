@@ -1,46 +1,38 @@
-# ADR [number]: [Title]
+# Key Performance Indicators for Acme Insurance
 
-## Context
+KPIs are essential to keep track of the business impact of the API ecosystem, making sure the organization optimizes their resources 
+getting the maximum value out of them.
 
-[Provide context for the decision, including any constraints or requirements that influenced the decision.]
-La empresa ACME Insurance tiene dos líneas de negocio, una de seguros de automóvil y otra de seguros del hogar
-Cada área tiene su propio departamento IT independiente que está divido en jefe de proyecto IT y Desarrolladores
+Some KPIs (and not limited to) than should/could be measured are:
 
-## Decision
-[State the decision that was made, including any options that were considered and rejected.]
+## Operational/DevOps
+* **Deployment frequency:** frequency of successful software releases to production. Could also be measured for other environments.
+* **Mean Time to Recover:** time (usually in hours) that takes to restore the service when a incident or a defect occurs.
+* **Deployment success rate:** ratio of success on deployments.
+* **Number of issues/defects:** identifies the number of bugs/issues present in the APIs.
+* **Number of Alerts:** Infractions to SLAs/SLOs/SLIs, should be measured per API, business group
 
-Es necesario medir el impacto en el desarrollo de nuevo software sobre los valores de tiempo, dinero y calidad del desarrollo
-- Tiempo: se necesita medir tiempo medio para el desarrollo de una nueva API dentro del departamento
-- Calidad: 
-  - Se necesita medir si cumple por lo requerido por el área de negocio corresondiente
-  - La calidad del software desarrollado mediante pruebas unitarias y procesos de validación
-  - La calidad del proceso que estará documentado 
-- Dinero:
-   - Se necesita conocer el presupuesto para cada desarrollo concreto
-   - Se necesita medir el coste del desarrollo incluyendo capital humano
-   - Se necesita medir el beneficio que reportará el desarrollo, ya sea económico directamente o en mejora de productividad
+## Performance
+* **Average response time per API:** should be measured per API or per endpoint/resource, could include percentiles.
+* **Throughput:** amount of work per time-unit, e.g. transactions per second.
+* **Average resource utilization(CPU/RAM)**
 
+## Platform Utilization
+* Number of Assets on Exchange
+* **Number of API clients:** could include measurements per API, business groups or total clients.
+* Number of APIs managed by the Anypoint Platform
+* Number of templates, API fragments or reusable assets
 
-## Status
+## Business
+* Percentage of service requests resolved within an agreed-upon period of time (SLA)
+* Availability & Downtime – the percentage of the time service is available & unavailable
+* **Time to Market/Lead time:** Number of days/weeks that takes to release a feature
 
-[Indicate the current status of the decision, such as "proposed", "accepted", "rejected", "superseded", or "obsolete".]
-proposed
-
-## Consequences
-
-[Describe the consequences, both positive and negative, of the decision, including any risks or dependencies.]
-Consecuencias positivas: eliminar incertidumbre al inicio del desarrolo sobre los elementos de tiempo, calidad y dinero mencionados anteriormente
-Consecuencias negativas: será necesario un esfuerzo inicial pero que será reportado un beneficio directo en cuanto a la optimización de desarrollos.
-
-## Related documents
-
-[List any related documents, such as requirements or design documents, that influenced the decision.]
-
-Documentos de proceso
-
-### References
-- https://github.com/joelparkerhenderson/architecture-decision-record
-- https://github.com/joelparkerhenderson/architecture-decision-record/blob/main/examples/metrics-monitors-alerts/index.md
-- https://github.com/pmerson/ADR-template
-- https://github.com/joelparkerhenderson/architecture-decision-record/blob/main/examples/timestamp-format/index.md
-- https://cloud.google.com/architecture/architecture-decision-records
+*****
+### Further Reading
+* State of DevOps report By Google https://services.google.com/fh/files/misc/state-of-devops-2021.pdf
+* Sample KPIs dashboards by Soundcloud https://github.com/soundcloud/project-dev-kpis
+* The Open Group KPIs: http://www.opengroup.org/cloud/wp_cloud_roi/p5.htm
+* GSA DevSecOps Guide (includes KPIs) https://tech.gsa.gov/guides/dev_sec_ops_guide/
+* KPI examples https://github.com/joelparkerhenderson/key-performance-indicator
+* KPIs definition by MIT https://ocw.mit.edu/courses/16-852j-integrating-the-lean-enterprise-fall-2005/d0f6ec325ea2757e7cba0a775e660a68_12_metrics.pdf
