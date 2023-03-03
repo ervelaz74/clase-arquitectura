@@ -28,4 +28,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Running tests... (executing Munit maven plugin)
+        run: echo Running tests... executing Munit maven plugin
